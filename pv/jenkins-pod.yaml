@@ -1,0 +1,516 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    checksum/config: be23948b8f60b1fe83533229fefc662faa2ea3009bcea8515ea861465fa9c96d
+  creationTimestamp: "2021-08-22T08:33:10Z"
+  generateName: jenkins-
+  labels:
+    app.kubernetes.io/component: jenkins-controller
+    app.kubernetes.io/instance: jenkins
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: jenkins
+    controller-revision-hash: jenkins-6d5994d654
+    statefulset.kubernetes.io/pod-name: jenkins-0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:checksum/config: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:controller-revision-hash: {}
+          f:statefulset.kubernetes.io/pod-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"bc2098a7-6754-4347-a0e5-1288559faf38"}:
+            .: {}
+            f:apiVersion: {}
+            f:blockOwnerDeletion: {}
+            f:controller: {}
+            f:kind: {}
+            f:name: {}
+            f:uid: {}
+      f:spec:
+        f:containers:
+          k:{"name":"config-reload"}:
+            .: {}
+            f:env:
+              .: {}
+              k:{"name":"FOLDER"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"LABEL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef:
+                    .: {}
+                    f:apiVersion: {}
+                    f:fieldPath: {}
+              k:{"name":"REQ_METHOD"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REQ_RETRY_CONNECT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"REQ_URL"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/jenkins_home"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/jenkins_home/casc_configs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"jenkins"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"CASC_JENKINS_CONFIG"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"JAVA_OPTS"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"JENKINS_OPTS"}:
+                .: {}
+                f:name: {}
+              k:{"name":"JENKINS_SLAVE_AGENT_PORT"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef:
+                    .: {}
+                    f:apiVersion: {}
+                    f:fieldPath: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":50000,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:startupProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/run/secrets/chart-admin-password"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/run/secrets/chart-admin-username"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/var/jenkins_config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/var/jenkins_home"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/jenkins_home/casc_configs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:imagePullSecrets:
+          .: {}
+          k:{"name":"harbor-cred"}:
+            .: {}
+            f:name: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"init"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/var/jenkins_config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/jenkins_home"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:fsGroup: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:subdomain: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"admin-secret"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"jenkins-config"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"jenkins-home"}:
+            .: {}
+            f:name: {}
+            f:persistentVolumeClaim:
+              .: {}
+              f:claimName: {}
+          k:{"name":"plugins"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"sc-config-volume"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2021-08-22T08:33:10Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          .: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:message: {}
+            f:reason: {}
+            f:status: {}
+            f:type: {}
+    manager: kube-scheduler
+    operation: Update
+    time: "2021-08-22T08:33:10Z"
+  name: jenkins-0
+  namespace: jenkins
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: jenkins
+    uid: bc2098a7-6754-4347-a0e5-1288559faf38
+  resourceVersion: "33907"
+  uid: a2cec398-69f3-4702-8deb-d2500a26bf09
+spec:
+  containers:
+  - args:
+    - --httpPort=8080
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: JAVA_OPTS
+      value: '-Dcasc.reload.token=$(POD_NAME) '
+    - name: JENKINS_OPTS
+    - name: JENKINS_SLAVE_AGENT_PORT
+      value: "50000"
+    - name: CASC_JENKINS_CONFIG
+      value: /var/jenkins_home/casc_configs
+    image: 10.10.10.149:32002/cicd/jenkins/jenkins:2.289.3-jdk11
+    imagePullPolicy: Always
+    livenessProbe:
+      failureThreshold: 5
+      httpGet:
+        path: /login
+        port: http
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    name: jenkins
+    ports:
+    - containerPort: 8080
+      name: http
+      protocol: TCP
+    - containerPort: 50000
+      name: agent-listener
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /login
+        port: http
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      limits:
+        cpu: "2"
+        memory: 4Gi
+      requests:
+        cpu: 50m
+        memory: 256Mi
+    startupProbe:
+      failureThreshold: 12
+      httpGet:
+        path: /login
+        port: http
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/jenkins_home
+      name: jenkins-home
+    - mountPath: /var/jenkins_config
+      name: jenkins-config
+      readOnly: true
+    - mountPath: /var/jenkins_home/casc_configs
+      name: sc-config-volume
+    - mountPath: /run/secrets/chart-admin-username
+      name: admin-secret
+      readOnly: true
+      subPath: jenkins-admin-user
+    - mountPath: /run/secrets/chart-admin-password
+      name: admin-secret
+      readOnly: true
+      subPath: jenkins-admin-password
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-5kztk
+      readOnly: true
+  - env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: LABEL
+      value: jenkins-jenkins-config
+    - name: FOLDER
+      value: /var/jenkins_home/casc_configs
+    - name: NAMESPACE
+      value: jenkins
+    - name: REQ_URL
+      value: http://localhost:8080/reload-configuration-as-code/?casc-reload-token=$(POD_NAME)
+    - name: REQ_METHOD
+      value: POST
+    - name: REQ_RETRY_CONNECT
+      value: "10"
+    image: 10.10.10.149:32002/cicd/kiwigrid/k8s-sidecar:1.12.2
+    imagePullPolicy: IfNotPresent
+    name: config-reload
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/jenkins_home/casc_configs
+      name: sc-config-volume
+    - mountPath: /var/jenkins_home
+      name: jenkins-home
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-5kztk
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: jenkins-0
+  imagePullSecrets:
+  - name: harbor-cred
+  initContainers:
+  - command:
+    - sh
+    - /var/jenkins_config/apply_config.sh
+    image: 10.10.10.149:32002/cicd/jenkins/jenkins:2.289.3-jdk11
+    imagePullPolicy: Always
+    name: init
+    resources:
+      limits:
+        cpu: "2"
+        memory: 4Gi
+      requests:
+        cpu: 50m
+        memory: 256Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/jenkins_home
+      name: jenkins-home
+    - mountPath: /var/jenkins_config
+      name: jenkins-config
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: default-token-5kztk
+      readOnly: true
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000
+    runAsNonRoot: true
+    runAsUser: 1000
+  serviceAccount: default
+  serviceAccountName: default
+  subdomain: jenkins
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - emptyDir: {}
+    name: plugins
+  - configMap:
+      defaultMode: 420
+      name: jenkins
+    name: jenkins-config
+  - name: jenkins-home
+    persistentVolumeClaim:
+      claimName: jenkins
+  - emptyDir: {}
+    name: sc-config-volume
+  - name: admin-secret
+    secret:
+      defaultMode: 420
+      secretName: jenkins
+  - name: default-token-5kztk
+    secret:
+      defaultMode: 420
+      secretName: default-token-5kztk
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2021-08-22T08:33:10Z"
+    message: '0/3 nodes are available: 3 pod has unbound immediate PersistentVolumeClaims.'
+    reason: Unschedulable
+    status: "False"
+    type: PodScheduled
+  phase: Pending
+  qosClass: Burstable
